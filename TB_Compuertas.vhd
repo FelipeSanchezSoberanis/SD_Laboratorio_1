@@ -37,42 +37,42 @@ END TB_Compuertas;
  
 ARCHITECTURE behavior OF TB_Compuertas IS 
  
-    -- Component Declaration for the Unit Under Test (UUT)
+	-- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT compuertas
-    PORT(
-         A : IN  std_logic;
-         B : IN  std_logic;
-         X : OUT  std_logic;
-         Y : OUT  std_logic;
-         Z : OUT  std_logic
-        );
-    END COMPONENT;
-    
+	COMPONENT compuertas
+	PORT(
+			A : IN  std_logic_vector(1 downto 0);
+			B : IN  std_logic_vector(1 downto 0);
+			X : OUT  std_logic;
+			Y : OUT  std_logic;
+			Z : OUT  std_logic
+		);
+	END COMPONENT;
+	
 
-   --Inputs
-   signal A : std_logic := '0';
-   signal B : std_logic := '0';
+   	--Inputs
+   	signal A : std_logic_vector(1 downto 0);
+   	signal B : std_logic_vector(1 downto 0);
 
- 	--Outputs
-   signal X : std_logic;
-   signal Y : std_logic;
-   signal Z : std_logic;
+	--Outputs
+	signal X : std_logic;
+	signal Y : std_logic;
+	signal Z : std_logic;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: compuertas PORT MAP (
-          A => A,
-          B => B,
-          X => X,
-          Y => Y,
-          Z => Z
-        );
+   	uut: compuertas PORT MAP (
+			A => A,
+			B => B,
+			X => X,
+			Y => Y,
+			Z => Z
+		);
 
-   -- Valores de las entradas
-  --  TODO cambiar los valores para dos bits 
-   A <= '0', '1' after 200 ns;
-   B <= '0', '1' after 100 ns, '0' after 200 ns, '1' after 300 ns;
-
+	-- Valores de las entradas
+	A(1) <= '0', '1' after 400ns;
+	A(0) <= '0', '1' after 200ns, '0' after 400ns, '1' after 600ns;
+	B(1) <= '0', '1' after 100ns, '0' after 200ns, '1' after 300ns, '0' after 400ns, '1' after 500ns, '0' after 600ns, '1' after 700ns, '0' after 800ns;
+	B(0) <= '0', '1' after 50ns, '0' after 100ns, '1' after 150ns, '0' after 200ns, '1' after 250ns, '0' after 300ns, '1' after 350ns, '0' after 400ns, '1' after 450ns, '0' after 500ns, '1' after 550ns, '0' after 600ns, '1' after 650ns, '0' after 700ns, '1' after 750ns;
 END;

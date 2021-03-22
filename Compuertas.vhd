@@ -18,10 +18,10 @@ architecture compuertas_arch of compuertas is
         tmp3 <= (not A(0)) and (not A(1)) and B(0);
         tmp4 <= (not A(1)) and B(1);
         tmp5 <= (not A(0)) and B(1) and B(0);
-        X <= tmp3 or tmp4 or tmp5;
+        Z <= tmp3 or tmp4 or tmp5;
 
         tmp6 <= (not B(0)) and (not B(1)) and A(0);
         tmp7 <= (not B(1)) and A(1);
         tmp8 <= (not B(0)) and A(1) and A(0);
-        Z <= tmp6 or tmp7 or tmp8;
+        X <= tmp6 or tmp7 or tmp8;
 end compuertas_arch;
