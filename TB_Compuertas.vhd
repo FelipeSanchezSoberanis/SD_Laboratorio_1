@@ -71,6 +71,7 @@ BEGIN
         );
 
    -- Valores de las entradas
+  --  TODO cambiar los valores para dos bits 
    A <= '0', '1' after 200 ns;
    B <= '0', '1' after 100 ns, '0' after 200 ns, '1' after 300 ns;
 

@@ -1,5 +1,7 @@
-NET "A" LOC = P38;
-NET "B" LOC = P36;
+NET "A<1>" LOC = P29;
+NET "A<0>" LOC = P24;
+NET "B<1>" LOC = P38;
+NET "B<0>" LOC = P36;
 NET "X" LOC = P15;
 NET "Y" LOC = P14;
 NET "Z" LOC = P8;
