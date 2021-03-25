@@ -1,4 +1,4 @@
-<p style="align:center">
+<p align="center">
 <img style="height:100px;margin:0"  src="https://upload.wikimedia.org/wikipedia/commons/8/8e/UADY_logo.svg" height="100px">
 </p>
 
