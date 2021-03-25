@@ -19,4 +19,19 @@ Students:
 
 ### Test Bench
 - [TEST: 1-BIT](https://github.com/FelipeSanchezSoberanis/SD_Laboratorio_1/blob/1bit/TB_Compuertas.vhd)
+
+	 For each test we have analyze all the combinations of inputs A and B, as is illustrated on the following code: 
+	 ```vhdl
+	 		A <= '0', '1' after 200 ns;
+			B <= '0', '1' after 100 ns, '0' after 200 ns, '1' after 300 ns;
+	```
+
 - [TEST: 2-BIT](https://github.com/FelipeSanchezSoberanis/SD_Laboratorio_1/blob/2bit/TB_Compuertas.vhd)
+
+	 Due that on the 2-BIT circuit we have a vector (<i>or a data bus</i>) we need to add other scenarios on the test in order to accomplish all the possible results:
+	```vhdl
+	 		A(1) <= '0', '1' after 400ns;
+			A(0) <= '0', '1' after 200ns, '0' after 400ns, '1' after 600ns;
+			B(1) <= '0', '1' after 100ns, '0' after 200ns, '1' after 300ns, '0' after 400ns, '1' after 500ns, '0' after 600ns, '1' after 700ns, '0' after 800ns;
+			B(0) <= '0', '1' after 50ns, '0' after 100ns, '1' after 150ns, '0' after 200ns, '1' after 250ns, '0' after 300ns, '1' after 350ns, '0' after 400ns, '1' after 450ns, '0' after 500ns, '1' after 550ns, '0' after 600ns, '1' after 650ns, '0' after 700ns, '1' after 750ns;
+	```
