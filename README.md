@@ -1,6 +1,7 @@
-<div style="display:flex;justify-content:center;margin:0;">
+<p style="align:center">
 <img style="height:100px;margin:0"  src="https://upload.wikimedia.org/wikipedia/commons/8/8e/UADY_logo.svg" height="100px">
-</div>
+</p>
+
 # Digital Systems
 
 ### Laboratory Practice 1
