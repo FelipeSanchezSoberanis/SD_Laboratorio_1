@@ -1,44 +1,11 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   18:15:50 03/21/2021
--- Design Name:   
--- Module Name:   C:/Xilinx/Laboratorio_1/TB_Compuertas.vhd
--- Project Name:  Laboratorio_1
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: compuertas
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
- 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
  
 ENTITY TB_Compuertas IS
 END TB_Compuertas;
  
 ARCHITECTURE behavior OF TB_Compuertas IS 
- 
-	-- Component Declaration for the Unit Under Test (UUT)
- 
+
 	COMPONENT compuertas
 	PORT(
 			A : IN  std_logic_vector(1 downto 0);
@@ -49,30 +16,25 @@ ARCHITECTURE behavior OF TB_Compuertas IS
 		);
 	END COMPONENT;
 	
-
-   	--Inputs
    	signal A : std_logic_vector(1 downto 0);
    	signal B : std_logic_vector(1 downto 0);
-
-	--Outputs
 	signal X : std_logic;
 	signal Y : std_logic;
 	signal Z : std_logic;
  
-BEGIN
+	BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
-   	uut: compuertas PORT MAP (
-			A => A,
-			B => B,
-			X => X,
-			Y => Y,
-			Z => Z
-		);
+		uut: compuertas PORT MAP (
+				A => A,
+				B => B,
+				X => X,
+				Y => Y,
+				Z => Z
+			);
 
-	-- Valores de las entradas
-	A(1) <= '0', '1' after 400ns;
-	A(0) <= '0', '1' after 200ns, '0' after 400ns, '1' after 600ns;
-	B(1) <= '0', '1' after 100ns, '0' after 200ns, '1' after 300ns, '0' after 400ns, '1' after 500ns, '0' after 600ns, '1' after 700ns, '0' after 800ns;
-	B(0) <= '0', '1' after 50ns, '0' after 100ns, '1' after 150ns, '0' after 200ns, '1' after 250ns, '0' after 300ns, '1' after 350ns, '0' after 400ns, '1' after 450ns, '0' after 500ns, '1' after 550ns, '0' after 600ns, '1' after 650ns, '0' after 700ns, '1' after 750ns;
+		-- Valores de las entradas
+		A(1) <= '0', '1' after 400ns;
+		A(0) <= '0', '1' after 200ns, '0' after 400ns, '1' after 600ns;
+		B(1) <= '0', '1' after 100ns, '0' after 200ns, '1' after 300ns, '0' after 400ns, '1' after 500ns, '0' after 600ns, '1' after 700ns, '0' after 800ns;
+		B(0) <= '0', '1' after 50ns, '0' after 100ns, '1' after 150ns, '0' after 200ns, '1' after 250ns, '0' after 300ns, '1' after 350ns, '0' after 400ns, '1' after 450ns, '0' after 500ns, '1' after 550ns, '0' after 600ns, '1' after 650ns, '0' after 700ns, '1' after 750ns;
 END;
