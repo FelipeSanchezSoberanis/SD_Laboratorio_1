@@ -32,7 +32,6 @@ ARCHITECTURE behavior OF TB_Compuertas IS
 				Z => Z
 			);
 
-		-- Valores de las entradas
 		A(1) <= '0', '1' after 400ns;
 		A(0) <= '0', '1' after 200ns, '0' after 400ns, '1' after 600ns;
 		B(1) <= '0', '1' after 100ns, '0' after 200ns, '1' after 300ns, '0' after 400ns, '1' after 500ns, '0' after 600ns, '1' after 700ns, '0' after 800ns;
