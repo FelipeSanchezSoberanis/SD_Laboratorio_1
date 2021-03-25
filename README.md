@@ -1,11 +1,9 @@
 <div style="display:flex;justify-content:center;margin:0;" markdown="1">
 <img style="height:100px;margin:0"  src="https://upload.wikimedia.org/wikipedia/commons/8/8e/UADY_logo.svg">
 </div>
-#Digital Systems
+# Digital Systems
 
-
-
-###Laboratory Practice 1
+### Laboratory Practice 1
 Students:
 - Felipe Sánchez Soberanis
 - Carlos Eduardo Canul Basto
@@ -14,7 +12,7 @@ Students:
 
 > <small>In this repository you can find all the code written and used for the design and simulation of the FPGAs contemplated in the practice. The default branch is for the case of 1 bit, but you can change it to the branch "2bit" to see the other case.</small>
 
-###Excercises
+### Excercises
 - [1-BIT](https://github.com/FelipeSanchezSoberanis/SD_Laboratorio_1/tree/1bit)
 - [2-BIT](https://github.com/FelipeSanchezSoberanis/SD_Laboratorio_1/tree/2bit)
 
